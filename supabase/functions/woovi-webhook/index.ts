@@ -48,7 +48,7 @@ Deno.serve(async (req) => {
     const event = payload.event;
     
     // Handle test webhook from Woovi (for registration)
-    if (payload.evento === "teste_webhook" || event === "test") {
+    if ((payload as any).evento === "teste_webhook" || event === "test") {
       console.log("Test webhook received - returning 200");
       return new Response(
         JSON.stringify({ success: true, message: "Webhook test successful" }),
@@ -90,7 +90,7 @@ Deno.serve(async (req) => {
         .from("payments")
         .update({
           status: "completed",
-          paid_at: charge.paidAt || new Date().toISOString(),
+          paid_at: (charge as any).paidAt || new Date().toISOString(),
           woovi_transaction_id: charge.transactionID || payload.pix?.charge?.transactionID,
         })
         .eq("id", payment.id);
