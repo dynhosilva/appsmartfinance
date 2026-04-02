@@ -1,0 +1,19 @@
+project_id = "tffhhpnbhijuhslhpnya"
+
+[functions.send-whatsapp]
+verify_jwt = false
+
+[functions.process-reminders]
+verify_jwt = false
+
+[functions.process-transaction-image]
+verify_jwt = false
+
+[functions.woovi-webhook]
+verify_jwt = false
+
+[functions.create-pix-charge]
+verify_jwt = false
+
+[functions.process-smart-alerts]
+verify_jwt = false

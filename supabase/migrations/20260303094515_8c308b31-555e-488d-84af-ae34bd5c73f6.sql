@@ -1,0 +1,1 @@
+ALTER TABLE public.transactions ADD COLUMN transaction_time time without time zone DEFAULT NULL;

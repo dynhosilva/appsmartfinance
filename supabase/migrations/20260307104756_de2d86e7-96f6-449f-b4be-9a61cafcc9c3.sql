@@ -1,0 +1,1 @@
+ALTER TABLE public.transactions ADD COLUMN is_essential boolean NOT NULL DEFAULT true;
