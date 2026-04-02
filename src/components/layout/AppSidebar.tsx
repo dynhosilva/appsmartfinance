@@ -59,6 +59,7 @@ const menuItems: MenuItem[] = [
   { title: "Jornada Financeira", icon: Map, path: "/independence-map" },
   { title: "Assistente Virtual", icon: Bot, path: "/whatsapp" },
   { title: "Divisão Automática", icon: Percent, path: "/split-config" },
+  { title: "Assistente IA", icon: Sparkles, path: "/ai-chat", highlight: true },
   { title: "Bloco de Notas", icon: StickyNote, path: "/notes" },
   { title: "Importar Dados", icon: FileUp, path: "/import-data" },
   { title: "Instalar App", icon: Smartphone, path: "/install" },

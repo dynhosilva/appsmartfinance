@@ -80,6 +80,7 @@ const App = () => (
               <Route path="/admin" element={<Admin />} />
               <Route path="/notes" element={<Notes />} />
               <Route path="/split-config" element={<SplitConfig />} />
+              <Route path="/ai-chat" element={<AiChat />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
