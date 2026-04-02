@@ -28,6 +28,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Admin = lazy(() => import("./pages/Admin"));
 const Notes = lazy(() => import("./pages/Notes"));
 const SplitConfig = lazy(() => import("./pages/SplitConfig"));
+const AiChat = lazy(() => import("./pages/AiChat"));
 
 // Minimal loading fallback
 const PageLoader = () => (
