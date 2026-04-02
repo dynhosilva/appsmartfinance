@@ -90,7 +90,7 @@ Deno.serve(async (req) => {
         .from("payments")
         .update({
           status: "completed",
-          paid_at: charge.paidAt || new Date().toISOString(),
+          paid_at: (charge as any).paidAt || new Date().toISOString(),
           woovi_transaction_id: charge.transactionID || payload.pix?.charge?.transactionID,
         })
         .eq("id", payment.id);
