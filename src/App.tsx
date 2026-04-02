@@ -28,6 +28,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Admin = lazy(() => import("./pages/Admin"));
 const Notes = lazy(() => import("./pages/Notes"));
 const SplitConfig = lazy(() => import("./pages/SplitConfig"));
+const AiChat = lazy(() => import("./pages/AiChat"));
 
 // Minimal loading fallback
 const PageLoader = () => (
@@ -79,6 +80,7 @@ const App = () => (
               <Route path="/admin" element={<Admin />} />
               <Route path="/notes" element={<Notes />} />
               <Route path="/split-config" element={<SplitConfig />} />
+              <Route path="/ai-chat" element={<AiChat />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
