@@ -64,15 +64,7 @@ export default defineConfig(({ mode }) => ({
     }),
   ].filter(Boolean),
   optimizeDeps: {
-    exclude: [
-      "@supabase/supabase-js",
-      "@supabase/auth-js",
-      "@supabase/functions-js",
-      "@supabase/realtime-js",
-      "@supabase/postgrest-js",
-      "@supabase/storage-js",
-    ],
-    include: ["react", "react-dom", "react/jsx-runtime"],
+    include: ["react", "react-dom", "react/jsx-runtime", "react-router-dom"],
   },
   resolve: {
     alias: {
