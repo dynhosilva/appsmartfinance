@@ -74,7 +74,10 @@ const Transactions = () => {
       return;
     }
 
-    if (formData.type === "expense" && formData.isEssential === null) {
+    const selectedCategory = categories.find(c => c.id === formData.categoryId);
+    const isNaoSeiCategory = selectedCategory?.name?.toLowerCase().trim() === "não sei";
+    
+    if (formData.type === "expense" && formData.isEssential === null && !isNaoSeiCategory) {
       toast.error("Por favor, marque se a transação é essencial ou não essencial");
       return;
     }
