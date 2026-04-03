@@ -202,7 +202,7 @@ serve(async (req) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-    const lovableApiKey = Deno.env.get("LOVABLE_API_KEY");
+    const openaiApiKey = Deno.env.get("OPENAI_API_KEY");
 
     if (!supabaseUrl) return jsonResponse({ error: "SUPABASE_URL is not configured" }, 500);
     if (!supabaseAnonKey) {
@@ -211,8 +211,8 @@ serve(async (req) => {
     if (!serviceRoleKey) {
       return jsonResponse({ error: "SUPABASE_SERVICE_ROLE_KEY is not configured" }, 500);
     }
-    if (!lovableApiKey) {
-      return jsonResponse({ error: "LOVABLE_API_KEY is not configured" }, 500);
+    if (!openaiApiKey) {
+      return jsonResponse({ error: "OPENAI_API_KEY is not configured" }, 500);
     }
 
     const authClient = createClient(supabaseUrl, supabaseAnonKey, {
